@@ -1,7 +1,7 @@
 'use client';
 
 import LoadingIcon from './loading-icon';
-import { useState } from 'react';
+import { useState, MouseEvent } from 'react';
 
 export default function Header() {
 
@@ -15,21 +15,21 @@ export default function Header() {
           <a
             className="text-left p-0.5 px-2 font-bold hover:text-blue-400"
             href="/"
-            onClick={e => handleClick(setLoading)}
+            onClick={e => handleClick(e, setLoading)}
           >
             Home
           </a>
           <a
             className="text-left p-0.5 px-2 font-bold hover:text-blue-400"
             href="/data-structures"
-            onClick={e => handleClick(setLoading)}
+            onClick={e => handleClick(e, setLoading)}
           >
             Data Structures
           </a>
           <a
             className="text-left p-0.5 px-2 font-bold hover:text-blue-400"
             href="/algorithms"
-            onClick={e => handleClick(setLoading)}
+            onClick={e => handleClick(e, setLoading)}
           >
             Algorithms
           </a>
@@ -39,6 +39,9 @@ export default function Header() {
   )
 }
 
-function handleClick(setLoading: (arg: boolean) => any) {
+function handleClick(e: MouseEvent<HTMLAnchorElement>, setLoading: (arg: boolean) => any) {
+  let new_window = e.currentTarget.href;
+  e.preventDefault();
   setLoading(true);
+  setTimeout(() => window.location.href = new_window, 1000);
 }
