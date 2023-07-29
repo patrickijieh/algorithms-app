@@ -5,33 +5,33 @@ import { useState, MouseEvent } from 'react';
 
 export default function Header() {
 
-  const [loading, setLoading] = useState(false);
+  const [is_loading, set_loading] = useState(false);
 
   return (
     <>
-      <LoadingIcon render={loading}/>
-      <nav className="min-w-full fixed top-0 left-0 flex-row">
-        <div className="align-left flex flex-row p-5">
+      <LoadingIcon render={is_loading} />
+      <nav className="min-w-full border-b border-gray-600">
+        <div className="align-left flex flex-row p-4">
           <a
-            className="text-left p-0.5 px-2 font-bold hover:text-blue-400"
+            className="text-left p-0.5 px-3 font-bold hover:text-blue-400"
             href="/"
-            onClick={e => handleClick(e, setLoading)}
+            onClick={e => handle_click(e, set_loading)}
           >
             Home
           </a>
           <a
-            className="text-left p-0.5 px-2 font-bold hover:text-blue-400"
-            href="/data-structures"
-            onClick={e => handleClick(e, setLoading)}
-          >
-            Data Structures
-          </a>
-          <a
-            className="text-left p-0.5 px-2 font-bold hover:text-blue-400"
+            className="text-left p-0.5 px-3 font-bold hover:text-blue-400"
             href="/algorithms"
-            onClick={e => handleClick(e, setLoading)}
+            onClick={e => handle_click(e, set_loading)}
           >
             Algorithms
+          </a>
+          <a
+            className="text-left p-0.5 px-3 font-bold hover:text-blue-400"
+            href="/data-structures"
+            onClick={e => handle_click(e, set_loading)}
+          >
+            Data Structures
           </a>
         </div>
       </nav>
@@ -39,9 +39,11 @@ export default function Header() {
   )
 }
 
-function handleClick(e: MouseEvent<HTMLAnchorElement>, setLoading: (arg: boolean) => any) {
+function handle_click(e: MouseEvent<HTMLAnchorElement>, set_loading: (arg: boolean) => void) {
   let new_window = e.currentTarget.href;
   e.preventDefault();
-  setLoading(true);
+  set_loading(true);
+
+  // add delay (for fun)
   setTimeout(() => window.location.href = new_window, 1000);
 }

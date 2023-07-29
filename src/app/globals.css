@@ -10,7 +10,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    --foreground-rgb: 235, 235, 235;
     --background-start-rgb: 19, 24, 25;
     --background-end-rgb: 31, 31, 31;
   }
@@ -24,4 +24,11 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.sidebar {
+  padding-right: 1rem;
+  min-height: 100dvh;
+  overflow: auto;
+  overflow-x: hidden;
 }
