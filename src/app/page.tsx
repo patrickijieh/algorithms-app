@@ -13,7 +13,7 @@ export default function Home() {
           An app to help you learn important Computer Science data structures and algorithms.
         </h3>
         <h3 className="text-center p-5">
-          Learn about binary search trees, linked lists, stacks, Dijkstra's algorithm, sorting algorithms, and more!
+          Learn about binary search trees, linked lists, stacks, Dijkstra&apos;s algorithm, sorting algorithms, and more!
         </h3>
         <h3 className="text-center p-5">
           Click on the links above to get started.

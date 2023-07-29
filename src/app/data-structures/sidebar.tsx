@@ -3,7 +3,7 @@
 export default function Sidebar() {
   return (
     <>
-      <div className="flex flex-col h-full border-r-2 border-gray-600 sidebar text-xs space-y-8">
+      <div className="flex flex-col place-self-stretch border-r-2 border-gray-600 sidebar text-xs space-y-8 min-h-full">
         <div className="pt-4 px-4">
           <a
             className="text-center px-1 font-bold hover:text-blue-400"

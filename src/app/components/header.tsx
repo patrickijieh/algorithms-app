@@ -39,7 +39,8 @@ export default function Header() {
   )
 }
 
-function handle_click(e: MouseEvent<HTMLAnchorElement>, set_loading: (arg: boolean) => void) {
+// eslint-disable-next-line no-unused-vars
+function handle_click(e: MouseEvent<HTMLAnchorElement>, set_loading: (arg0: boolean) => void) {
   let new_window = e.currentTarget.href;
   e.preventDefault();
   set_loading(true);
