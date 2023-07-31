@@ -46,5 +46,7 @@ function handle_click(e: MouseEvent<HTMLAnchorElement>, set_loading: (arg0: bool
   set_loading(true);
 
   // add delay (for fun)
-  setTimeout(() => window.location.href = new_window, 1000);
+  let delay = (Math.random() * 2000) + 1000;
+
+  setTimeout(() => window.location.href = new_window, delay);
 }

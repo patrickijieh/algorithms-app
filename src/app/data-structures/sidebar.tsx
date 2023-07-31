@@ -1,5 +1,8 @@
 'use client';
 
+import Topic from './structuresTopics';
+import { MouseEvent } from 'react';
+
 export default function Sidebar() {
   return (
     <>
@@ -7,6 +10,7 @@ export default function Sidebar() {
         <div className="pt-4 px-4">
           <a
             className="text-center px-1 font-bold hover:text-blue-400"
+            onClick={(e) => changePage(e, Topic.Arrays)}
           >
             <p className="text-left">
               Arrays
@@ -16,6 +20,7 @@ export default function Sidebar() {
         <div className="px-4">
           <a
             className="text-center px-1 font-bold hover:text-blue-400"
+            onClick={(e) => changePage(e, Topic.LinkedLists)}
           >
             <p className="text-left">
               Linked Lists
@@ -25,6 +30,7 @@ export default function Sidebar() {
         <div className="px-4">
           <a
             className="text-center px-1 font-bold hover:text-blue-400"
+            onClick={(e) => changePage(e, Topic.Stacks)}
           >
             <p className="text-left">
               Stacks
@@ -34,6 +40,7 @@ export default function Sidebar() {
         <div className="px-4">
           <a
             className="text-center px-1 font-bold hover:text-blue-400"
+            onClick={(e) => changePage(e, Topic.Queues)}
           >
             <p className="text-left">
               Queues
@@ -43,6 +50,7 @@ export default function Sidebar() {
         <div className="px-4">
           <a
             className="text-right px-1 font-bold hover:text-blue-400"
+            onClick={(e) => changePage(e, Topic.HashTables)}
           >
             <p className="text-left">
               Hash Tables
@@ -52,6 +60,7 @@ export default function Sidebar() {
         <div className="px-4">
           <a
             className="text-center px-1 font-bold hover:text-blue-400"
+            onClick={(e) => changePage(e, Topic.Trees)}
           >
             <p className="text-left">
               Trees
@@ -61,6 +70,7 @@ export default function Sidebar() {
         <div className="px-4">
           <a
             className="text-center px-1 font-bold hover:text-blue-400"
+            onClick={(e) => changePage(e, Topic.Heaps)}
           >
             <p className="text-left">
               Heaps
@@ -70,6 +80,7 @@ export default function Sidebar() {
         <div className="px-4">
           <a
             className="text-center px-1 font-bold hover:text-blue-400"
+            onClick={(e) => changePage(e, Topic.Tries)}
           >
             <p className="text-left">
               Tries
@@ -79,13 +90,29 @@ export default function Sidebar() {
         <div className="px-4">
           <a
             className="text-center px-1 font-bold hover:text-blue-400"
+            onClick={(e) => changePage(e, Topic.AVLTrees)}
           >
             <p className="text-left">
               AVL Trees
             </p>
           </a>
         </div>
+        <div className="px-4">
+          <a
+            className="text-center px-1 font-bold hover:text-blue-400"
+            onClick={(e) => changePage(e, Topic.Graphs)}
+          >
+            <p className="text-left">
+              Graphs
+            </p>
+          </a>
+        </div>
       </div>
     </>
   )
+}
+
+function changePage(e: MouseEvent<HTMLAnchorElement>, page: Topic) {
+  e.preventDefault();
+  console.log(page);
 }
