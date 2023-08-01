@@ -1,6 +1,5 @@
 'use client';
 
-import Topic from './structuresTopics';
 import Main from './pages/main';
 import Arrays from './pages/arrays';
 import AVLTrees from './pages/avl-trees';
@@ -15,8 +14,50 @@ import Tries from './pages/tries';
 import Sidebar from './sidebar';
 import { useState } from 'react';
 
-export default function Content() {
+export enum Topic {
+  Main = "main",
+  Arrays = "arrays",
+  LinkedLists = "linked-lists",
+  Stacks = "stacks",
+  Queues = "queues",
+  HashTables = "hash-tables",
+  Trees = "trees",
+  Heaps = "heaps",
+  Tries = "tries",
+  AVLTrees = "avl-trees",
+  Graphs = "graphs",
+}
 
+export function getTopicName(topic: Topic): string {
+  switch (topic) {
+    case Topic.Main:
+      return "Main";
+    case Topic.Arrays:
+      return "Arrays";
+    case Topic.LinkedLists:
+      return "Linked Lists";
+    case Topic.Stacks:
+      return "Stacks";
+    case Topic.Queues:
+      return "Queues";
+    case Topic.HashTables:
+      return "Hash Tables";
+    case Topic.Trees:
+      return "Trees";
+    case Topic.Heaps:
+      return "Heaps";
+    case Topic.Tries:
+      return "Tries";
+    case Topic.AVLTrees:
+      return "AVL Trees";
+    case Topic.Graphs:
+      return "Graphs";
+    default:
+      return "Unknown";
+  }
+}
+
+export default function Content() {
   const [topic, setTopic] = useState(Topic.Main);
 
   function changeTopic(newTopic: Topic) {
@@ -27,7 +68,7 @@ export default function Content() {
     case Topic.Main:
       return (
         <>
-          <Sidebar changeTopic={changeTopic}/>
+          <Sidebar change_topic={changeTopic}/>
           <Main />
         </>
       )
@@ -35,7 +76,7 @@ export default function Content() {
     case Topic.Arrays:
       return (
         <>
-          <Sidebar changeTopic={changeTopic}/>
+          <Sidebar change_topic={changeTopic}/>
           <Arrays />
         </>
       )
@@ -43,7 +84,7 @@ export default function Content() {
     case Topic.LinkedLists:
       return (
         <>
-          <Sidebar changeTopic={changeTopic}/>
+          <Sidebar change_topic={changeTopic}/>
           <LinkedLists />
         </>
       )
@@ -51,7 +92,7 @@ export default function Content() {
     case Topic.Stacks:
       return (
         <>
-          <Sidebar changeTopic={changeTopic}/>
+          <Sidebar change_topic={changeTopic}/>
           <Stacks />
         </>
       )
@@ -59,7 +100,7 @@ export default function Content() {
     case Topic.Queues:
       return (
         <>
-          <Sidebar changeTopic={changeTopic}/>
+          <Sidebar change_topic={changeTopic}/>
           <Queues />
         </>
       )
@@ -67,7 +108,7 @@ export default function Content() {
     case Topic.HashTables:
       return (
         <>
-          <Sidebar changeTopic={changeTopic}/>
+          <Sidebar change_topic={changeTopic}/>
           <HashTables />
         </>
       )
@@ -75,7 +116,7 @@ export default function Content() {
     case Topic.Trees:
       return (
         <>
-          <Sidebar changeTopic={changeTopic}/>
+          <Sidebar change_topic={changeTopic}/>
           <Trees />
         </>
       )
@@ -83,7 +124,7 @@ export default function Content() {
     case Topic.Heaps:
       return (
         <>
-          <Sidebar changeTopic={changeTopic}/>
+          <Sidebar change_topic={changeTopic}/>
           <Heaps />
         </>
       )
@@ -91,7 +132,7 @@ export default function Content() {
     case Topic.Tries:
       return (
         <>
-          <Sidebar changeTopic={changeTopic}/>
+          <Sidebar change_topic={changeTopic}/>
           <Tries />
         </>
       )
@@ -99,15 +140,15 @@ export default function Content() {
     case Topic.AVLTrees:
       return (
         <>
-          <Sidebar changeTopic={changeTopic}/>
+          <Sidebar change_topic={changeTopic}/>
           <AVLTrees />
         </>
       )
-      
+
     case Topic.Graphs:
       return (
         <>
-          <Sidebar changeTopic={changeTopic}/>
+          <Sidebar change_topic={changeTopic}/>
           <Graphs />
         </>
       )
@@ -115,7 +156,7 @@ export default function Content() {
     default:
       return (
         <>
-          <Sidebar changeTopic={changeTopic}/>
+          <Sidebar change_topic={changeTopic}/>
           <Main />
         </>
       )

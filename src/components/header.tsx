@@ -4,7 +4,6 @@ import LoadingIcon from './loading-icon';
 import { useState, MouseEvent } from 'react';
 
 export default function Header() {
-
   const [is_loading, set_loading] = useState(false);
 
   return (
@@ -39,9 +38,11 @@ export default function Header() {
   )
 }
 
-// eslint-disable-next-line no-unused-vars
 function handle_click(e: MouseEvent<HTMLAnchorElement>, set_loading: (arg0: boolean) => void) {
   let new_window = e.currentTarget.href;
+  if (new_window === window.location.href) {
+    window.location.reload();
+  }
   e.preventDefault();
   set_loading(true);
 

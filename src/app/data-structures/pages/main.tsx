@@ -1,5 +1,4 @@
 export default function Main() {
-
   return (
     <div className="flex ml-5 space-x-1 space-y-1 w-5/6 place-self-stretch justify-center pt-6">
       <div className="flex flex-col">

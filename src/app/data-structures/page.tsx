@@ -1,7 +1,5 @@
 import Header from '../../components/header';
-import Sidebar from './sidebar';
 import Content from './content';
-import Topic from './structuresTopics';
 
 import type { Metadata } from 'next';
 
