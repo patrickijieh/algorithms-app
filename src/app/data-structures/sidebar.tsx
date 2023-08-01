@@ -3,14 +3,14 @@
 import Topic from './structuresTopics';
 import { MouseEvent } from 'react';
 
-export default function Sidebar() {
+export default function Sidebar(props: { changeTopic: (newTopic: Topic) => void }) {
   return (
     <>
       <div className="flex flex-col place-self-stretch border-r-2 border-gray-600 sidebar space-y-8 min-h-full text-sm">
         <div className="pt-4 px-4">
           <a
             className="text-center px-1 font-bold hover:text-blue-400"
-            onClick={(e) => changePage(e, Topic.Arrays)}
+            onClick={(e) => changePage(e, Topic.Arrays, props.changeTopic)}
           >
             <p className="text-left">
               Arrays
@@ -20,7 +20,7 @@ export default function Sidebar() {
         <div className="px-4">
           <a
             className="text-center px-1 font-bold hover:text-blue-400"
-            onClick={(e) => changePage(e, Topic.LinkedLists)}
+            onClick={(e) => changePage(e, Topic.LinkedLists, props.changeTopic)}
           >
             <p className="text-left">
               Linked Lists
@@ -30,7 +30,7 @@ export default function Sidebar() {
         <div className="px-4">
           <a
             className="text-center px-1 font-bold hover:text-blue-400"
-            onClick={(e) => changePage(e, Topic.Stacks)}
+            onClick={(e) => changePage(e, Topic.Stacks, props.changeTopic)}
           >
             <p className="text-left">
               Stacks
@@ -40,7 +40,7 @@ export default function Sidebar() {
         <div className="px-4">
           <a
             className="text-center px-1 font-bold hover:text-blue-400"
-            onClick={(e) => changePage(e, Topic.Queues)}
+            onClick={(e) => changePage(e, Topic.Queues, props.changeTopic)}
           >
             <p className="text-left">
               Queues
@@ -50,7 +50,7 @@ export default function Sidebar() {
         <div className="px-4">
           <a
             className="text-right px-1 font-bold hover:text-blue-400"
-            onClick={(e) => changePage(e, Topic.HashTables)}
+            onClick={(e) => changePage(e, Topic.HashTables, props.changeTopic)}
           >
             <p className="text-left">
               Hash Tables
@@ -60,7 +60,7 @@ export default function Sidebar() {
         <div className="px-4">
           <a
             className="text-center px-1 font-bold hover:text-blue-400"
-            onClick={(e) => changePage(e, Topic.Trees)}
+            onClick={(e) => changePage(e, Topic.Trees, props.changeTopic)}
           >
             <p className="text-left">
               Trees
@@ -70,7 +70,7 @@ export default function Sidebar() {
         <div className="px-4">
           <a
             className="text-center px-1 font-bold hover:text-blue-400"
-            onClick={(e) => changePage(e, Topic.Heaps)}
+            onClick={(e) => changePage(e, Topic.Heaps, props.changeTopic)}
           >
             <p className="text-left">
               Heaps
@@ -80,7 +80,7 @@ export default function Sidebar() {
         <div className="px-4">
           <a
             className="text-center px-1 font-bold hover:text-blue-400"
-            onClick={(e) => changePage(e, Topic.Tries)}
+            onClick={(e) => changePage(e, Topic.Tries, props.changeTopic)}
           >
             <p className="text-left">
               Tries
@@ -90,7 +90,7 @@ export default function Sidebar() {
         <div className="px-4">
           <a
             className="text-center px-1 font-bold hover:text-blue-400"
-            onClick={(e) => changePage(e, Topic.AVLTrees)}
+            onClick={(e) => changePage(e, Topic.AVLTrees, props.changeTopic)}
           >
             <p className="text-left">
               AVL Trees
@@ -100,7 +100,7 @@ export default function Sidebar() {
         <div className="px-4">
           <a
             className="text-center px-1 font-bold hover:text-blue-400"
-            onClick={(e) => changePage(e, Topic.Graphs)}
+            onClick={(e) => changePage(e, Topic.Graphs, props.changeTopic)}
           >
             <p className="text-left">
               Graphs
@@ -112,7 +112,8 @@ export default function Sidebar() {
   )
 }
 
-function changePage(e: MouseEvent<HTMLAnchorElement>, page: Topic) {
+function changePage(e: MouseEvent<HTMLAnchorElement>, page: Topic, changeTopic: (newTopic: Topic) => void) {
   e.preventDefault();
   console.log(page);
+  changeTopic(page);
 }

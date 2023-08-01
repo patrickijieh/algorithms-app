@@ -6,7 +6,7 @@ export default function Footer() {
             Made by Patrick Ijieh (July 2023).
           </p>
           <a
-            className="hover:text-blue-400" 
+            className="text-blue-400 hover:text-blue-800" 
             href="https://github.com/patrickijieh/algorithms-app"
             target="_blank"
             rel="noopener noreferrer"

@@ -15,7 +15,6 @@ export default function DataStructuresPage() {
     <main className="flex min-h-screen flex-col items-center">
       <Header />
       <div className="flex flex-row items-start min-w-full overflow-visible">
-        <Sidebar />
         <Content />
       </div>
     </main>

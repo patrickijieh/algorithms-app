@@ -9,12 +9,24 @@ export default function Sidebar() {
               Sorts
             </p>
             <ul className="list-disc">
-              <li className="ml-4 font-bold text-xs hover:text-blue-400">Insertion Sort</li>
-              <li className="ml-4 font-bold text-xs hover:text-blue-400">Selection Sort</li>
-              <li className="ml-4 font-bold text-xs hover:text-blue-400">Bubble Sort</li>
-              <li className="ml-4 font-bold text-xs hover:text-blue-400">Merge Sort</li>
-              <li className="ml-4 font-bold text-xs hover:text-blue-400">Quick Sort</li>
-              <li className="ml-4 font-bold text-xs hover:text-blue-400">Bogo Sort</li>
+              <li className="ml-4 font-bold text-xs hover:text-blue-400">
+                Insertion Sort
+              </li>
+              <li className="ml-4 font-bold text-xs hover:text-blue-400">
+                Selection Sort
+              </li>
+              <li className="ml-4 font-bold text-xs hover:text-blue-400">
+                Bubble Sort
+              </li>
+              <li className="ml-4 font-bold text-xs hover:text-blue-400">
+                Merge Sort
+              </li>
+              <li className="ml-4 font-bold text-xs hover:text-blue-400">
+                Quick Sort
+              </li>
+              <li className="ml-4 font-bold text-xs hover:text-blue-400">
+                Bogo Sort
+              </li>
             </ul>
         </div>
         <div className="px-4">
