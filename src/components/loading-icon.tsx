@@ -1,4 +1,4 @@
-export default function Loading(props: { render: boolean }) {
+export default function LoadingIcon(props: { render: boolean }) {
   return (
     props.render ? (
     <>

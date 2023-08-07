@@ -39,12 +39,13 @@ export default function Header() {
 }
 
 function handle_click(e: MouseEvent<HTMLAnchorElement>, set_loading: (arg0: boolean) => void) {
+  e.preventDefault();
   let new_window = e.currentTarget.href;
+  set_loading(true);
   if (new_window === window.location.href) {
     window.location.reload();
+    return;
   }
-  e.preventDefault();
-  set_loading(true);
 
   // add delay (for fun)
   let delay = (Math.random() * 2000) + 1000;
