@@ -5,7 +5,7 @@ import { MouseEvent } from 'react';
 export default function Sidebar(props: { change_topic: (new_topic: Topic) => void }) {
   return (
     <>
-      <div className="flex flex-col place-self-stretch border-r-2 border-gray-600 sidebar space-y-4 min-h-full text-sm">
+      <div className="sticky flex flex-col place-self-stretch border-r-2 border-gray-600 sidebar space-y-4 text-sm">
         <div className="pt-4 px-4">
           <button
             className="text-center px-1 py-3 font-bold hover:text-blue-400"

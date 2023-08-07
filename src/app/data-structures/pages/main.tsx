@@ -10,7 +10,7 @@ export default function Main() {
           Things such as arrays, linked lists, and trees are all examples of data structures that are used on a daily basis in
           software development. For example, arrays are used to store data in a list format:<br /><br />
           Python code (prints to the console: &quot;1 2 3 4 5 &quot;):<br /><br />
-          <p className="w-1/4 border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800
+          <p className="w-fit border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800
                         dark:bg-zinc-800/30 dark:from-inherit lg:static lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
             <code className="text-sm">
               arr = [1, 2, 3, 4, 5]<br />
