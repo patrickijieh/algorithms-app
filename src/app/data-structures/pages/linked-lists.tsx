@@ -6,9 +6,10 @@ export default function LinkedListsPage() {
           Linked Lists.
         </h1>
         <h3 className="text-left p-5">
-          Linked Lists are a data structure that is used to store data in a list format. They are similar to arrays, but to access an element in a
+          A linked list is a data structure that is used to store data in a list format. They are similar to arrays, but to access an element in a
           linked list, one must iterate through the list until the desired element is found. Linked lists are made up of nodes, which contain a value
-          and a <em>pointer</em> to the next element in the list.<br /><br />
+          and a <em>pointer</em> to the next element in the list. To traverse the list, you must use each node's pointer to the next element to go
+          through the list. As you can imagine, this can take a long time compared to arrays if the linked list grows to a moderate size.<br /><br />
           Python code (prints to the console: &quot;List: 1 2 3 &quot;)<br /><br />
           <p className="w-fit border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800
                         dark:bg-zinc-800/30 dark:from-inherit lg:static lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
@@ -36,7 +37,16 @@ export default function LinkedListsPage() {
               my_list.printList()<br />
             </code>
           </p> <br />
-          Linked lists are very useful when wanting to store data in a structure that will not have a known size at compile time.
+          Linked lists are very useful when wanting to store data in a structure that will not have a known size at compile time. Since they do not
+          have a set size and can be modified in many ways to be much more efficient (double-linked lists and skip lists, for example), they are an
+          incredibly useful and important data structure that is used in many applications.<br /><br />
+          Time Complexity (Accessing an element): O(n) (can end up being closer to O(1) in best case)<br />
+          Time Complexity (Inserting a new element):<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;Front of the list: O(1)<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;End of the list: O(n)<br />
+          Time Complexity (Removing an element): O(1) (not counting the time to find said element)<br />
+          Space Complexity: O(n)<br /><br />
+          ...With <em>n</em> being the number of elements currently in the linked list.<br />
         </h3>
       </div>
     </div>
