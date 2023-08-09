@@ -32,6 +32,13 @@ export default function Header() {
           >
             Data Structures
           </a>
+          <a
+            className="text-left p-0.5 px-3 font-bold hover:text-blue-400"
+            href="/resources"
+            onClick={e => handle_click(e, set_loading)}
+          >
+            Resources
+          </a>
         </div>
       </nav>
     </>
