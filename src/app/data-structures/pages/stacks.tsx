@@ -17,6 +17,83 @@ export default function StacksPage() {
             <li>isFull: Checks to see if the stack is full or not.</li>
           </ul>
           For many programming languages, stacks are contained in the standard library, and can be imported and used as needed.<br /><br />
+          Stacks are useful for many different applications, such as reversing a string, or checking for balanced parentheses.<br />
+          For our Python example, we will be implementing a stack using an array:<br /><br />
+          <p className="w-fit border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800
+                        dark:bg-zinc-800/30 dark:from-inherit lg:static lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+            <code className="text-sm">
+            class Stack:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, size):<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.size = size<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.stack = []<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.top = -1<br /><br />
+                  
+            &nbsp;&nbsp;&nbsp;&nbsp;def push(self, data):<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if self.top == self.size - 1:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Stack is full!")<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.stack.append(data)<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.top += 1<br /><br />
+                
+            &nbsp;&nbsp;&nbsp;&nbsp;def pop(self):<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if self.top == -1:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Stack is empty!")<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.top -= 1<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self.stack.pop()<br /><br />
+                
+            &nbsp;&nbsp;&nbsp;&nbsp;def peek(self):<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if self.top == -1:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Stack is empty!")<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self.stack[self.top]<br /><br />
+                  
+            &nbsp;&nbsp;&nbsp;&nbsp;def isEmpty(self):<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self.top == -1<br /><br />
+                
+            &nbsp;&nbsp;&nbsp;&nbsp;def isFull(self):<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self.top == self.size - 1<br /><br />
+          </code>
+          </p> <br />
+          To add an item to the stack, we initialize the stack and we use the .push() method like so:<br /><br />
+          <p className="w-fit border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800
+                        dark:bg-zinc-800/30 dark:from-inherit lg:static lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+            <code className="text-sm">
+              myStack = Stack(5)<br />
+              myStack.push(1)<br />
+              myStack.push(2)<br />
+            </code>
+          </p> <br />
+          And if we pop the stack and print it, we get the following:<br /><br />
+          <p className="w-fit border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800
+                        dark:bg-zinc-800/30 dark:from-inherit lg:static lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+            <code className="text-sm">
+              # prints 2<br />
+              &gt;&gt;&gt; print(myStack.pop())<br />
+              2<br />
+            </code>
+          </p> <br />
+          And if we pop the stack two more times, we get the following:<br /><br />
+          <p className="w-fit border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800
+                        dark:bg-zinc-800/30 dark:from-inherit lg:static lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+            <code className="text-sm">
+              # prints 1, None<br />
+              &gt;&gt;&gt; print(myStack.pop())<br />
+              1<br />
+              &gt;&gt;&gt; print(myStack.pop())<br />
+              Stack is empty!<br />
+              None<br />
+            </code>
+          </p> <br />
+          As you can see, the stack is empty after popping the stack twice. You can also double-check by printing out the underlying array in the stack.<br /><br />
+          <p className="w-fit border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800
+                        dark:bg-zinc-800/30 dark:from-inherit lg:static lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+            <code className="text-sm">
+              # prints []<br />
+              &gt;&gt;&gt; print(myStack.stack)<br />
+              []<br />
+            </code>
+          </p> <br />
         </h3>
       </div>
     </div>
