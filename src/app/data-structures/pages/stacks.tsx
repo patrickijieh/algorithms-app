@@ -96,6 +96,17 @@ export default function StacksPage() {
               []<br />
             </code>
           </p> <br />
+
+          <span className="font-bold">Time and Space Complexities:</span><br /><br />
+          Time Complexities:<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;Calling push() with a pointer to the top: O(1)<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;Calling pop() with a pointer to the top: O(1)<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;Calling peek() with a pointer to the top: O(1)<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;Calling isEmpty(): O(1)<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;Calling isFull(): O(1)<br /><br />
+          Space Complexities:<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;O(n) for the stack; O(1) for its operations<br /><br />
+          ...Where <em>n</em> is the size of the stack.<br />
         </h3>
       </div>
     </div>

@@ -121,6 +121,14 @@ export default function QueuesPage() {
             List: 2 3 <br />
           </code>
           </p> <br />
+
+          <span className="font-bold">Time and Space Complexities:</span><br /><br />
+          Time Complexities:<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;Enqueue with a pointer at the tail: O(1)<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;Dequeue with a pointer at the head: O(1)<br /><br />
+          Space Complexities:<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;O(n) for the queue; O(1) for its operations<br /><br />
+          ...Where <em>n</em> is the size of the queue.<br />
         </h3>
       </div>
     </div>

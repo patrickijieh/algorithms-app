@@ -45,7 +45,8 @@ export default function HashTablesPage() {
           </code>
           </p> <br />
           Some programming languages, such as C, do not have built-in hash tables. In this case, we would have to implement our own simple hash table
-          and simple hashing function. We can implement a simple hash table in C with an array. First, lets put in some import statements, and define some constants and types:<br /><br />
+          and simple hashing function. We can implement a simple hash table in C with an array. First, lets put in some import statements, and define
+          some constants and types:<br /><br />
           <p className="w-fit border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800
                         dark:bg-zinc-800/30 dark:from-inherit lg:static lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
             <code className="text-sm">
@@ -77,9 +78,9 @@ export default function HashTablesPage() {
             &#125;<br />
           </code>
           </p> <br />
-          You don't need to know how this hashing function works, but it is important to know that it is a very simple hashing function and it returns a hash
-          value for a given string. Now, lets define some helper functions for our hashtable, so that we can create a new one, insert into an
-          existing one, check if it contains a value, and delete a hashtable if we need to.<br /><br />
+          You don't need to know how this hashing function works, but it is important to know that it is a very simple hashing function and it
+          returns a hash value for a given string. Now, lets define some helper functions for our hashtable, so that we can create a new one, insert
+          into an existing one, check if it contains a value, and delete a hashtable if we need to.<br /><br />
           Creating a new hashtable is done by creating space in memory for our table using <code className="text-sm">malloc</code>, and setting
           everything inside of it to NULL:<br /><br />
           <p className="w-fit border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800
@@ -116,7 +117,8 @@ export default function HashTablesPage() {
             &#125;<br />
           </code>
           </p> <br />
-          Checking if a hashtable contains a value is done by first hashing the value, and then checking if the value exists in the hashtable:<br /><br />
+          Checking if a hashtable contains a value is done by first hashing the value, and then checking if the value exists in the 
+          hashtable:<br /><br />
           <p className="w-fit border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800
                         dark:bg-zinc-800/30 dark:from-inherit lg:static lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
             <code className="text-sm">
@@ -166,18 +168,26 @@ export default function HashTablesPage() {
             &#125;<br />
           </code>
           </p> <br />
-          The code outputs 1 and 0, showing that our hashtable works effectively:<br /><br />
+          Running this code outputs 1 and 0, showing that our hashtable works effectively:<br /><br />
           <p className="w-fit border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800
                         dark:bg-zinc-800/30 dark:from-inherit lg:static lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
             <code className="text-sm">
             patrick $ gcc -o hashtable hashtable.c<br />
-            patrick $ ./hashtable.exe<br />
+            patrick $ ./hashtable<br />
             Output:<br />
             1<br />
             0<br />
             patrick $<br />
           </code>
           </p> <br />
+
+          <span className="font-bold">Time and Space Complexities:</span><br /><br />
+          Time Complexities:<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;Insert: O(1)<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;Contains: O(1)<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;Delete: O(1)<br /><br />
+          Space Complexity: O(n)<br /><br />
+          ...Where <em>n</em> is the number of elements in the hashtable.<br /><br />
         </h3>
       </div>
     </div>

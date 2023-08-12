@@ -19,10 +19,12 @@ export default function ArraysPage() {
               print(toppings[0], end=&quot;&quot;)<br />
             </code>
           </p> <br />
-          Notice that in order to access the first element in the array, we use the index 0. Arrays in most programming languages (Python, C, Java, etc.)
-          are zero-indexed, meaning they start at 0 and end at the length of the array minus 1.<br />
+          Notice that in order to access the first element in the array, we use the index 0. Arrays in most programming languages (Python, C, Java,
+          etc.) are zero-indexed, meaning they start at 0 and end at the length of the array minus 1.<br />
           The index for &quot;ham&quot; is 0, the index for &quot;peppers&quot; is 1, the index for &quot;bacon&quot; is 2, etc...<br /><br />
           Arrays are a very useful data structure, and can be used as a building block for more complex data structures.<br /><br />
+
+          <span className="font-bold">Time and Space Complexities:</span><br /><br />
           Time Complexity (Accessing an element): O(1)<br />
           Time Complexity (Inserting a new element): O(n)<br />
           Time Complexity (Removing an element): O(n)<br />

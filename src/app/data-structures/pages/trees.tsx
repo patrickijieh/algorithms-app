@@ -6,7 +6,8 @@ export default function TreesPage() {
           Binary Trees.
         </h1>
         <h3 className="text-left p-5">
-          Binary trees are a type of tree data structure in which each node has at most two children, referred to as the left child and the right child.<br />
+          Binary trees are a type of tree data structure in which each node has a value, and at most two children, referred to as the left child and
+          the right child. The left child's value is always less than the parent, and the right child's value is always greater than the parent.<br />
         </h3>
       </div>
     </div>

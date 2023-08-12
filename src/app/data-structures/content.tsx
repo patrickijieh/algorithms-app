@@ -61,6 +61,9 @@ export default function Content() {
   const [topic, setTopic] = useState(Topic.Main);
 
   function changeTopic(newTopic: Topic) {
+    if (newTopic === topic) {
+      return;
+    }
     setTopic(newTopic);
   }
 
