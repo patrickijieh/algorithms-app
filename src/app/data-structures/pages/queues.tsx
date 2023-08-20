@@ -5,6 +5,12 @@ export default function QueuesPage() {
         <h1 className="text-center font-semibold py-5">
           Queues.
         </h1>
+        <a 
+          className="text-right text-blue-400 hover:text-blue-800"
+          href="#complexities"
+        >
+            Jump to time & space complexities
+        </a>
         <h3 className="text-left p-5">
           A queues is a data structure that stores items in a First-In-First-Out (FIFO) system. This means that the first item added to the queue
           will be the first item removed from the queue. Queues are useful for storing items that need to be accessed in a specific order. For
@@ -122,7 +128,13 @@ export default function QueuesPage() {
           </code>
           </p> <br />
 
-          <span className="font-bold">Time and Space Complexities:</span><br /><br />
+          <span 
+            className="font-bold"
+            id="complexities"
+          >
+            Time and Space Complexities:
+          </span><br /><br />
+
           Time Complexities:<br />
           &nbsp;&nbsp;&nbsp;&nbsp;Enqueue with a pointer at the tail: O(1)<br />
           &nbsp;&nbsp;&nbsp;&nbsp;Dequeue with a pointer at the head: O(1)<br /><br />

@@ -5,7 +5,12 @@ export default function LinkedListsPage() {
         <h1 className="text-center font-semibold py-5">
           Linked Lists.
         </h1>
-        <a className="text-right text-blue-400 hover:text-blue-800" href="#complexities">Jump to time & space complexities</a>
+        <a 
+          className="text-right text-blue-400 hover:text-blue-800"
+          href="#complexities"
+        >
+            Jump to time & space complexities
+        </a>
         <h3 className="text-left p-5">
           A linked list is a data structure that is used to store data in a list format. They are similar to arrays, but to access an element in a
           linked list, one must iterate through the list until the desired element is found. Linked lists are made up of nodes, which contain a value
@@ -42,7 +47,13 @@ export default function LinkedListsPage() {
           have a set size and can be modified in many ways to be much more efficient (double-linked lists and skip lists, for example), they are an
           incredibly useful and important data structure that is used in many applications.<br /><br />
 
-          <span className="font-bold" id="complexities">Time and Space Complexities:</span><br /><br />
+          <span 
+            className="font-bold" 
+            id="complexities"
+          >
+            Time and Space Complexities:
+          </span> <br /><br />
+          
           Time Complexity (Accessing an element): O(n) (can end up being closer to O(1) in best case)<br />
           Time Complexity (Inserting a new element):<br />
           &nbsp;&nbsp;&nbsp;&nbsp;Front of the list: O(1)<br />

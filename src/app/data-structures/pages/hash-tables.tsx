@@ -5,6 +5,12 @@ export default function HashTablesPage() {
         <h1 className="text-center font-semibold py-5">
           Hash Tables.
         </h1>
+        <a 
+          className="text-right text-blue-400 hover:text-blue-800"
+          href="#complexities"
+        >
+            Jump to time & space complexities
+        </a>
         <h3 className="text-left p-5">
           A hash table is a data structure that stores key/value pairs in memory. Hash tables are built around the idea of hashing, which is the
           process of mapping an input of any size to an output of a fixed size, using a hashing function. Good hashing functions are usually fast
@@ -117,7 +123,7 @@ export default function HashTablesPage() {
             &#125;<br />
           </code>
           </p> <br />
-          Checking if a hashtable contains a value is done by first hashing the value, and then checking if the value exists in the 
+          Checking if a hashtable contains a value is done by first hashing the value to get the key, and then checking if the key exists in the 
           hashtable:<br /><br />
           <p className="w-fit border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800
                         dark:bg-zinc-800/30 dark:from-inherit lg:static lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
@@ -181,13 +187,19 @@ export default function HashTablesPage() {
           </code>
           </p> <br />
 
-          <span className="font-bold">Time and Space Complexities:</span><br /><br />
+          <span 
+            className="font-bold" 
+            id="complexities"
+          >
+            Time and Space Complexities:
+          </span> <br /><br />
+
           Time Complexities:<br />
           &nbsp;&nbsp;&nbsp;&nbsp;Insert: O(1)<br />
           &nbsp;&nbsp;&nbsp;&nbsp;Contains: O(1)<br />
-          &nbsp;&nbsp;&nbsp;&nbsp;Delete: O(1)<br /><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;Remove: O(1)<br /><br />
           Space Complexity: O(n)<br /><br />
-          ...Where <em>n</em> is the number of elements in the hashtable.<br /><br />
+          ...Where <em>n</em> is the number of elements in the hash table.<br /><br />
         </h3>
       </div>
     </div>

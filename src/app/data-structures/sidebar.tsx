@@ -62,7 +62,7 @@ export default function Sidebar(props: { change_topic: (new_topic: Topic) => voi
             onClick={(e) => handle_click(e, Topic.Trees, props.change_topic)}
           >
             <p className="text-left">
-              Trees
+              BSTs
             </p>
           </button>
         </div>

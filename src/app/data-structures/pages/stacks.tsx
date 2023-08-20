@@ -5,6 +5,12 @@ export default function StacksPage() {
         <h1 className="text-center font-semibold py-5">
           Stacks.
         </h1>
+        <a 
+          className="text-right text-blue-400 hover:text-blue-800" 
+          href="#complexities"
+        >
+          Jump to time & space complexities
+        </a>
         <h3 className="text-left p-5">
           A stack is a data structure that stores items in a Last-In-First-Out (LIFO) system. This means that the last item added to the stack will
           be the first item removed from the stack. Stacks are usually implemented using a linked list, but can also be implemented using an array.
@@ -97,7 +103,13 @@ export default function StacksPage() {
             </code>
           </p> <br />
 
-          <span className="font-bold">Time and Space Complexities:</span><br /><br />
+          <span 
+            className="font-bold"
+            id="complexities"
+          >
+            Time and Space Complexities:
+          </span><br /><br />
+          
           Time Complexities:<br />
           &nbsp;&nbsp;&nbsp;&nbsp;Calling push() with a pointer to the top: O(1)<br />
           &nbsp;&nbsp;&nbsp;&nbsp;Calling pop() with a pointer to the top: O(1)<br />
